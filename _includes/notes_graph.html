@@ -13,7 +13,8 @@
   .text text {
     cursor: pointer;
     fill: #333;
-    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
+    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb,
+      -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
   }
 
   .nodes [active],
@@ -32,7 +33,7 @@
     border-radius: 4px;
     height: auto;
   }
-  
+
   #graph-wrapper > svg {
     max-width: 100%;
     display: block;
@@ -61,8 +62,21 @@
         const MAX_LABEL_LENGTH = 50;
 
         const graphData = {% include notes_graph.json %}
-        let nodesData = graphData.nodes;
-        let linksData = graphData.edges;
+
+        let currentNode = graphData.nodes.filter((d)=>isCurrentPath(d.path))[0];
+        let nodesIds = new Set();
+        graphData.edges.filter((d) => {
+          if (d.target === currentNode.id || d.source === currentNode.id){
+            nodesIds.add(d.target);
+            nodesIds.add(d.source);
+            return d            
+          }
+        });
+        
+        let nodesData = graphData.nodes.filter((d) => nodesIds.has(d.id));
+        let linksData = graphData.edges.filter((d) => 
+        (nodesIds.has(d.target) && nodesIds.has(d.source))
+        );
 
         const nodeSize = {};
 
