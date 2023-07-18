@@ -36,7 +36,7 @@ Hello (●'◡'●)，我是 Rainver，一个热爱科技、运动，正在努�
 <strong>最近笔记</strong>
 
 <ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+  {% assign recent_notes = site.notes | sort: "last_modified_at" | reverse %}
   {% for note in recent_notes limit: 10 %}
     <li>
       {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ note.url }}">{{ note.title }}</a>
