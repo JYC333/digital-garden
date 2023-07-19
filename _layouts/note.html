@@ -5,18 +5,21 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %} Last updated on {{
-      page.last_modified_at |
-      date: "%B %-d, %Y" }} {% endif %}
-    </time>
+    <div id="articleInfo" style="display: flex;">
+      <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages'
+        %} 最后修改于 {{
+        page.last_modified_at |
+        date: "%Y-%m-%d" }} {% endif %}
+      </time>
+      <div style="display: block; margin: 0.5em 0 1em; padding-left: 1em; color: hsl(0, 0%, 30%); font-size: medium;">
+        阅读量:<span class="waline-pageview-count" data-path="{{ page.url }}" />
+      </div>
+    </div>
   </div>
 
   <div id="notes-entry-container">
     <content>
       {{ content }}
-      <div style="text-align: center; color: gray; font-size: small; margin-top: 10%;">
-        到头儿啦~
-      </div>
     </content>
 
     <side style="font-size: 0.9em">
@@ -37,15 +40,23 @@ layout: default
       {% else %}
 
       <div style="font-size: 0.9em">
-        <p>There are no notes linking to this note.</p>
+        <p>还没人提过这条笔记呢 😞</p>
       </div>
       {% endif %}
     </side>
   </div>
+  <div style="text-align: center; color: gray; font-size: small; margin-top: 10%;">
+    到头儿啦~
+  </div>
 </article>
 
-<hr />
+<hr>
+</hr>
 
-<p>局部链接关系图</p>
-
+<h3 style="margin-bottom: 1em">局部关系图</h3>
 {% include notes_graph.html %}
+
+<hr>
+</hr>
+
+<div id="waline"></div>
