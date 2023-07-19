@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'fileutils'
-require 'pathname'
 require 'time'
 
 module Recents
