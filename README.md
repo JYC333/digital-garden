@@ -1,34 +1,24 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8cfa8785-8df8-4aad-ad35-8f1c790b8baf/deploy-status)](https://app.netlify.com/sites/digital-garden-jekyll-template/deploys)
 
-# Digital garden Jekyll template
+# Digital Garden: My Second Brain
 
-Use this template repository to get started with your own digital garden.
+**_Currently, the content is written only in Chinese. I'm still considering whether or not to add an English translation._**
 
-**I wrote a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
+Welcome to my Digital Garden - a space that's 99.999% synchronized with my "Second Brain" aiming to capture 99.999% of what I learn, think, feel, and realize in the form of atomic notes.
 
-Preview the template here: https://digital-garden-jekyll-template.netlify.app/
+## What is the "Second Brain"?
 
-- Based on Jekyll, a static website generator
-- Supports Roam-style double bracket link syntax to other notes
-- Creates backlinks to other notes automatically
-- Features link previews on hover
-- Includes graph visualization of the notes and their links
-- Features a simple and responsive design
-- Supports Markdown or HTML notes
+The concept of the "Second Brain" is my realization of the knowledge network philosophy with the help of the dual-link note software, Obsidian. Through atomic notes and evergreen notes, I record and build connections between pieces of knowledge. I first encountered the idea of the "Second Brain" in 2017 through Xiaoneng Xiong, viewing the computer as an extension of our own brains to aid in information collection, processing, organization, and internalization. As time progresses, I'm refining my understanding and application of this concept to assist personal growth. Here, you'll find the overarching framework and historical development of my "Second Brain." Feel free to explore.
 
-<img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
+## Origins of the "Digital Garden"
 
-## A note about GitHub Pages
+The concept of the "Digital Garden" became widely recognized during a digital learning research network conference held at Stanford University in 2015. Mike Caufield's keynote, [The Garden and the Stream: A Technopastoral](https://hapgood.us/2015/10/17/the-garden-and-the-stream-a-technopastoral/), shed light on this idea. Mike believed that the stream mode (timeline-dominated) couldn't bear systematic knowledge. In the Web 2.0 era, the content production mode of personal blogs and social media is fundamentally stream-centric. If everyone drowns in this stream, the internet will soon become a chaotic place filled with fragmented knowledge, making it hard to contribute to humanity's collective understanding.
 
-**Update (January 2023)**: it seems that GitHub Pages supports custom plugins now, thanks to GitHub Actions ([view relevant discussion](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/144)).
+Distinct from traditional blogs, the "Digital Garden" publishes content based on logical connections, interlinking them as if wandering through a garden. Moreover, the content isn't a perfectly articulated article at the onset; it evolves and enriches over time, much like seeds scattered in a garden that take root, sprout, and grow robustly across the seasons.
 
-GitHub Pages only partially supports this template: to power the interactive notes graph, this template uses a custom Jekyll plugin to generate the graph data in [`notes_graph.json`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/7ac331a4113bac77c993856562acc2bfbde9f2f7/_plugins/bidirectional_links_generator.rb#L102), and [GitHub Pages doesn't support custom Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins).
+## Template
 
-If you want to use the graph with GitHub Pages, you may try building your garden locally using Jekyll then pushing the result to GitHub Pages.
-
-Alternatively, you may deploy your garden to Netlify and it'll work out of the box. [I wrote a guide explaining how to set this up](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-If you don't care about the graph, you can simply remove it from this layout, [as explained here](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/132#discussioncomment-3625772).
+The template is from repo [digital-garden-jekyll-template](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
 
 ## License
 
