@@ -53,5 +53,6 @@ exclude:
   - _includes/notes_graph.json
   - _notes/**/*.canvas
   - _notes/999 - Cache
-  - _notes/500 - Self Coaching 自我成长/520 - Career 职业发展
+  - _notes/500 - Self Coaching 自我成长/520 - Growth Journey 成长轨迹
   - _notes/500 - Self Coaching 自我成长/530 - Mind Imprint 思维印记
+  - _notes/500 - Self Coaching 自我成长/540 - Career 职业发展
